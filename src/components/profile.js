@@ -1,20 +1,21 @@
  
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import App from '../App';
 
-function profile ({profile}) {
+function Profile({ profile }) {
     return (
-      <Card className='col-md-4'>
-        <Card.Img variant= "Top"src={profile.img} />
-        <Card.Body>
-          <Card.Title>{profile.name}</Card.Title>
-          <Card.Text>
-          {profile.desc}
-          </Card.Text>
-          <a href={profile.link}target='-'><Button variant="primary"> {profile.Btn} </Button></a>
-        </Card.Body>
-      </Card> 
+        <Card className='col-md-2 m-1'>
+            <Card.Img variant="top" src={profile.img} />
+            <Card.Body>
+                <Card.Title>{profile.name}</Card.Title>
+                <Card.Text>
+                  {profile.desc}
+                </Card.Text>
+                <a href={profile.link} target='_' variant="primary"><Button>{profile.btn}</Button>
+                </a>
+            </Card.Body>
+        </Card>
     )
-  }
-export default profile;
+}
+
+export default Profile;
